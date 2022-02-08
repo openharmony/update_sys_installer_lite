@@ -74,9 +74,7 @@
                     }
                 }
             ],
-            "test": [
-                "//base/update/ota_lite/frameworks/test/unittest/common:update_test"
-            ]
+            "test": []
         }
     }
 }

@@ -28,9 +28,9 @@ unittest("update_test") {
     "//kernel/liteos-a/lib/libsec/include",
   ]
   deps = [
+    "$ohos_third_party_dir/mbedtls:mbedtls_static",
     "//base/update/ota_lite/frameworks/source:hota",
     "//third_party/bounds_checking_function:libsec_shared",
-    "//third_party/mbedtls:mbedtls_static",
   ]
   if (ohos_kernel_type == "liteos_m") {
     deps += [ "$ohos_board_adapter_dir/hals/update:hal_update_static" ]
