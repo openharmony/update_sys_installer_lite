@@ -115,7 +115,7 @@ static int32 HotaSignVerifyByHash(const uint8 *hash, uint32 hashLen, const uint8
     }
 
     int ret = AppRsaDecodePublicKey(&rsa, keyBuf, length);
-    if (ret) {
+    if (ret != 0) {
         return OHOS_FAILURE;
     }
 

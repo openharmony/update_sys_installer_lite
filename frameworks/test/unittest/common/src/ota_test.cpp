@@ -196,7 +196,7 @@ static int HotaWriteTest(const char *otaPkg, int len, int pkgOffset)
             (void)HotaCancel();
             return -1;
         }
-        if (HotaWrite((unsigned char *)g_readBuf, offset, tmpLen)) {
+        if (HotaWrite((unsigned char *)g_readBuf, offset, tmpLen) != 0) {
             printf("ota write fail!\r\n");
             (void)HotaCancel();
             return -1;
@@ -245,12 +245,12 @@ static int HotaReadTest(const char *otaPkg, int len, int pkgOffset)
     while (leftLen > 0) {
         int tmpLen = ((leftLen >= READ_BUF_LEN) ? READ_BUF_LEN : leftLen);
         (void)memset_s(g_readBuf, READ_BUF_LEN, 0, READ_BUF_LEN);
-        if (HotaRead(offset, READ_BUF_LEN, (unsigned char *)g_readBuf)) {
+        if (HotaRead(offset, READ_BUF_LEN, (unsigned char *)g_readBuf) != 0) {
             printf("ota write fail!\r\n");
             (void)HotaCancel();
             return -1;
         }
-        if (memcmp(g_readBuf, otaPkg + offset, tmpLen)) {
+        if (memcmp(g_readBuf, otaPkg + offset, tmpLen) != 0) {
             printf("file content cmp fail!\r\n");
             (void)HotaCancel();
             return -1;

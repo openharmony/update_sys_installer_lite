@@ -150,7 +150,7 @@ static void ReportErrorCode(HotaErrorCode errorCode)
 
 static bool IsDigest(const char *str)
 {
-    if (str == nullptr) {
+    if (str == NULL) {
         return false;
     }
     const unsigned int len = strlen(str);
@@ -174,7 +174,7 @@ static bool IsLatestVersion(const char *pkgVersion, const char *currentVersion)
     char split[] = ".| ";
     int ret = strcpy_s(pkgVerCopy, PKG_VERSION_LENGTH, pkgVersion);
     ret += strcpy_s(currentVerCopy, PKG_VERSION_LENGTH, currentVersion);
-    if (ret) {
+    if (ret != 0) {
         return false;
     }
 
