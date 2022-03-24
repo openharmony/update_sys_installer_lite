@@ -599,7 +599,7 @@ int HotaInit(ErrorCallBackFunc errorCallback, StatusCallBackFunc statusCallback)
         return OHOS_FAILURE;
     }
 
-    g_otaComponents = reinterpret_cast<ComponentTableInfo *>(HotaHalGetPartitionInfo());
+    g_otaComponents = (ComponentTableInfo *)HotaHalGetPartitionInfo();
 
     UpdateStatus(HOTA_INITED);
     return OHOS_SUCCESS;
