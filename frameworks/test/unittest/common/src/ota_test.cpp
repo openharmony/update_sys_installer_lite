@@ -196,7 +196,7 @@ static int HotaWriteTest(const char *otaPkg, int len, int pkgOffset)
             (void)HotaCancel();
             return -1;
         }
-        if (HotaWrite((unsigned char *)g_readBuf, offset, tmpLen) != 0) {
+        if (HotaWrite((unsigned char *)g_readBuf, offset, tmpLen)) {
             printf("ota write fail!\r\n");
             (void)HotaCancel();
             return -1;
@@ -245,12 +245,12 @@ static int HotaReadTest(const char *otaPkg, int len, int pkgOffset)
     while (leftLen > 0) {
         int tmpLen = ((leftLen >= READ_BUF_LEN) ? READ_BUF_LEN : leftLen);
         (void)memset_s(g_readBuf, READ_BUF_LEN, 0, READ_BUF_LEN);
-        if (HotaRead(offset, READ_BUF_LEN, (unsigned char *)g_readBuf) != 0) {
+        if (HotaRead(offset, READ_BUF_LEN, (unsigned char *)g_readBuf)) {
             printf("ota write fail!\r\n");
             (void)HotaCancel();
             return -1;
         }
-        if (memcmp(g_readBuf, otaPkg + offset, tmpLen) != 0) {
+        if (memcmp(g_readBuf, otaPkg + offset, tmpLen)) {
             printf("file content cmp fail!\r\n");
             (void)HotaCancel();
             return -1;
@@ -304,7 +304,7 @@ static int HotaCalcImageHash(uint8 *dataAddr, uint32 dataLen, uint8 *hash, uint3
     AppSha256Context sha256;
     uint32 count;
 
-    if ((dataAddr == NULL) || (hash == NULL) || (dataLen == 0) || (hashLen < HASH_LENGTH)) {
+    if ((dataAddr == nullptr) || (hash == nullptr) || (dataLen == 0) || (hashLen < HASH_LENGTH)) {
         return -1;
     }
 

@@ -53,8 +53,8 @@ typedef struct {
 
 #pragma pack(1)
 typedef struct {
-    unsigned short type;
-    unsigned short length;
+    uint16 type;
+    uint16 length;
     unsigned int infoCompSize;
     unsigned int upgradePkgVersion;
     char productId[PRODUCT_ID_LENGTH];
@@ -65,7 +65,7 @@ typedef struct {
 #pragma pack(1)
 typedef struct {
     unsigned char addr[PARTITION_NAME_LENGTH];  /* partition name */
-    unsigned short id;                          /* component ID */
+    uint16 id;                                  /* component ID */
     unsigned char type;                         /* component type */
     unsigned char operType;                     /* component operation type. 0: need upgrade 1: need delete */
     unsigned char isDiff;                       /* Is Diff component */
@@ -88,10 +88,10 @@ typedef struct {
 } HotaNotifier;
 
 static HotaStatus g_otaStatus = HOTA_NOT_INIT;
-static unsigned short g_allComponentNum = 0;
-static unsigned short g_allComponentSize = 0;
-static unsigned short g_recvComponentNum = 0;
-static unsigned short g_infoCompAndSignSize;        /* the size of Info Component */
+static uint16 g_allComponentNum = 0;
+static uint16 g_allComponentSize = 0;
+static uint16 g_recvComponentNum = 0;
+static uint16 g_infoCompAndSignSize;        /* the size of Info Component */
 static CurrentDloadComp g_currentDloadComp = { 0 }; /* Currently downloading component information */
 static ComponentInfos g_componentInfos = { 0 };
 static HotaNotifier g_otaNotifier = { 0 };    /* OTA Notifier, notify caller when error or status changed */
@@ -150,6 +150,9 @@ static void ReportErrorCode(HotaErrorCode errorCode)
 
 static bool IsDigest(const char *str)
 {
+    if (str == nullptr) {
+        return false;
+    }
     const unsigned int len = strlen(str);
     for (unsigned int i = 0; i < len; i++) {
         if (str[i] < '0' || str[i] > '9') {
@@ -171,7 +174,7 @@ static bool IsLatestVersion(const char *pkgVersion, const char *currentVersion)
     char split[] = ".| ";
     int ret = strcpy_s(pkgVerCopy, PKG_VERSION_LENGTH, pkgVersion);
     ret += strcpy_s(currentVerCopy, PKG_VERSION_LENGTH, currentVersion);
-    if (ret != 0) {
+    if (ret) {
         return false;
     }
 
@@ -200,7 +203,7 @@ static bool IsLatestVersion(const char *pkgVersion, const char *currentVersion)
         isLatest = false;
     }
 
-    if (isLatest == false) {
+    if (!isLatest) {
         isLatest = HotaHalCheckVersionValid(currentVersion, pkgVersion, PKG_VERSION_LENGTH) ? true : false;
     }
 
@@ -388,7 +391,7 @@ static int ProcessInfoCompHeader(const unsigned char *infoCompBuffer, unsigned i
 static bool DloadIsDone(void)
 {
     if ((g_allComponentNum != 0) && (g_recvComponentNum >= g_allComponentNum) &&
-        (g_currentDloadComp.isInfoComp == false)) {
+        (!g_currentDloadComp.isInfoComp)) {
         printf("OTA dload file success.\r\n");
         return true;
     }
@@ -591,12 +594,12 @@ int HotaInit(ErrorCallBackFunc errorCallback, StatusCallBackFunc statusCallback)
         return result;
     }
 
-    g_infoCompBuff = (unsigned char *)malloc(MAX_BUFFER_SIZE);
+    g_infoCompBuff = reinterpret_cast<unsigned char *>(malloc(MAX_BUFFER_SIZE));
     if (g_infoCompBuff == NULL) {
         return OHOS_FAILURE;
     }
 
-    g_otaComponents = (ComponentTableInfo *)HotaHalGetPartitionInfo();
+    g_otaComponents = reinterpret_cast<ComponentTableInfo *>(HotaHalGetPartitionInfo());
 
     UpdateStatus(HOTA_INITED);
     return OHOS_SUCCESS;
