@@ -200,7 +200,7 @@ static bool IsLatestVersion(const char *pkgVersion, const char *currentVersion)
         isLatest = false;
     }
 
-    if (isLatest == false) {
+    if (!isLatest) {
         isLatest = HotaHalCheckVersionValid(currentVersion, pkgVersion, PKG_VERSION_LENGTH) ? true : false;
     }
 
@@ -388,7 +388,7 @@ static int ProcessInfoCompHeader(const unsigned char *infoCompBuffer, unsigned i
 static bool DloadIsDone(void)
 {
     if ((g_allComponentNum != 0) && (g_recvComponentNum >= g_allComponentNum) &&
-        (g_currentDloadComp.isInfoComp == false)) {
+        (!g_currentDloadComp.isInfoComp)) {
         printf("OTA dload file success.\r\n");
         return true;
     }

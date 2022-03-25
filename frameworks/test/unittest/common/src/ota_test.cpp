@@ -304,7 +304,7 @@ static int HotaCalcImageHash(uint8 *dataAddr, uint32 dataLen, uint8 *hash, uint3
     AppSha256Context sha256;
     uint32 count;
 
-    if ((dataAddr == NULL) || (hash == NULL) || (dataLen == 0) || (hashLen < HASH_LENGTH)) {
+    if ((dataAddr == nullptr) || (hash == nullptr) || (dataLen == 0) || (hashLen < HASH_LENGTH)) {
         return -1;
     }
 
