@@ -108,7 +108,7 @@ int HotaHalRollback(void);
  * @since 1.0
  * @version 1.0
  */
-const ComponentTableInfo *HotaHalGetPartitionInfo();
+const ComponentTableInfo *HotaHalGetPartitionInfo(void);
 
 /**
  * @brief Get public key.
