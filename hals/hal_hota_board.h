@@ -152,7 +152,7 @@ int HotaHalGetUpdateAbility(void);
 int HotaHalGetOtaPkgPath(char *path, int len);
 
 /**
- * @brief judge deivce can auto update.
+ * @brief judge device can auto update.
  *
  * You need to call this function when update process init.\n
  *
