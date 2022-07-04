@@ -209,7 +209,7 @@ int HotaGetUpdateAbility(void);
 int HotaGetOtaPkgPath(char *path, int len);
 
 /**
- * @brief judge deivce can auto reboot.
+ * @brief judge device can auto reboot.
  *
  * You need to call this function when update process init.\n
  *
