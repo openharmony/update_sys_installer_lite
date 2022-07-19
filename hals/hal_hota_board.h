@@ -29,6 +29,9 @@ extern "C" {
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalInit(void);
 
@@ -37,6 +40,9 @@ int HotaHalInit(void);
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalDeInit(void);
 
@@ -45,6 +51,9 @@ int HotaHalDeInit(void);
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalGetUpdateIndex(unsigned int *index);
 
@@ -58,6 +67,9 @@ int HotaHalGetUpdateIndex(unsigned int *index);
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalWrite(int partition, unsigned char *buffer, unsigned int offset, unsigned int bufLen);
 
@@ -71,6 +83,9 @@ int HotaHalWrite(int partition, unsigned char *buffer, unsigned int offset, unsi
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalRead(int partition, unsigned int offset, unsigned int bufLen, unsigned char *buffer);
 
@@ -79,6 +94,9 @@ int HotaHalRead(int partition, unsigned int offset, unsigned int bufLen, unsigne
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalSetBootSettings(void);
 
@@ -87,6 +105,9 @@ int HotaHalSetBootSettings(void);
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalRestart(void);
 
@@ -95,6 +116,9 @@ int HotaHalRestart(void);
  *
  * @return OHOS_SUCCESS: Success,
  *         Others: Failure.
+ *
+ * @since 1.0
+ * @version 1.0
  */
 int HotaHalRollback(void);
 
@@ -140,7 +164,7 @@ int HotaHalGetUpdateAbility(void);
  * @brief get ota package update path.
  *
  * You need to call this function before update process. \n
- * 
+ *
  * @param path Indicates where ota package you place.
  * @param len Indicates  path len.
  *
