@@ -50,7 +50,7 @@
         "ram": "",
         "deps": {
             "components": [
-                "startup_syspara_lite",
+                "init",
                 "utils_native"
             ],
             "third_party": [

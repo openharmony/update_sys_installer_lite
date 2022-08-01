@@ -26,13 +26,13 @@ if (ohos_kernel_type == "liteos_m") {
       "//base/update/ota_lite/frameworks/source/verify",
       "//utils/native/lite/include",
       "//kernel/liteos_m/kal/cmsis",
-      "//base/startup/syspara_lite/interfaces/kits",
+      "//base/startup/init/interfaces/innerkits/include/syspara",
       "//third_party/bounds_checking_function/include",
       "$ohos_third_party_dir/mbedtls/include",
       "$ohos_third_party_dir/lwip_sack/include",
     ]
     cflags = [ "-Wno-unused-variable" ]
-    deps = [ "//base/startup/syspara_lite/frameworks/parameter/src:sysparam" ]
+    deps = [ "//base/startup/init/interfaces/innerkits:libbegetutil" ]
     deps += [ "$ohos_board_adapter_dir/hals/update:hal_update_static" ]
   }
 } else {
@@ -50,7 +50,7 @@ if (ohos_kernel_type == "liteos_m") {
       "//base/update/ota_lite/frameworks/source/verify",
       "//utils/native/lite/include",
       "//kernel/liteos_m/kal/cmsis",
-      "//base/startup/syspara_lite/interfaces/kits",
+      "//base/startup/init/interfaces/innerkits/include/syspara",
       "//third_party/bounds_checking_function/include",
       "$ohos_third_party_dir/mbedtls/include",
       "$ohos_third_party_dir/lwip_sack/include",
@@ -59,7 +59,7 @@ if (ohos_kernel_type == "liteos_m") {
       "-Wno-unused-variable",
       "-DDYNAMIC_LOAD_HAL",
     ]
-    deps = [ "//base/startup/syspara_lite/frameworks/parameter/src:sysparam" ]
+    deps = [ "//base/startup/init/interfaces/innerkits:libbegetutil" ]
     ldflags = [ "-lhal_update" ]
     deps += [ "$ohos_board_adapter_dir/update:hal_update" ]
   }
