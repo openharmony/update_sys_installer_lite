@@ -21,7 +21,7 @@ unittest("update_test") {
     "//base/update/ota_lite/interfaces/kits",
     "//base/update/ota_lite/frameworks/include",
     "//base/update/ota_lite/hals",
-    "//utils/native/liteos/include",
+    "//commonlibrary/utils_liteos/include",
     "//third_party/bounds_checking_function/include",
     "//kernel/liteos-a/compat/linux/include",
     "//kernel/liteos-a/kernel/include/",
