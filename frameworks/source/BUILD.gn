@@ -28,7 +28,7 @@ if (ohos_kernel_type == "liteos_m") {
       "//kernel/liteos_m/kal/cmsis",
       "//base/startup/init/interfaces/innerkits/include/syspara",
       "//third_party/bounds_checking_function/include",
-      "$ohos_third_party_dir/mbedtls/include",
+      "//third_party/mbedtls/include",
       "$ohos_third_party_dir/lwip_sack/include",
     ]
     cflags = [ "-Wno-unused-variable" ]
@@ -52,7 +52,7 @@ if (ohos_kernel_type == "liteos_m") {
       "//kernel/liteos_m/kal/cmsis",
       "//base/startup/init/interfaces/innerkits/include/syspara",
       "//third_party/bounds_checking_function/include",
-      "$ohos_third_party_dir/mbedtls/include",
+      "//third_party/mbedtls/include",
       "$ohos_third_party_dir/lwip_sack/include",
     ]
     cflags = [
