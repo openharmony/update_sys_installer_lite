@@ -14,6 +14,10 @@ OTA（Over the Air）提供对设备远程升级能力，基于提供的接口�
 
 更多升级子系统相关概念，请参考：[升级子系统](https://gitee.com/openharmony/docs/blob/master/zh-cn/readme/%E5%8D%87%E7%BA%A7%E5%AD%90%E7%B3%BB%E7%BB%9F.md)
 
+**图 1**  升级子系统架构图
+
+![](figures/Openharmony-updater-升级子系统架构图.png)
+
 ## 目录<a name="section1464106163817"></a>
 
 ```
