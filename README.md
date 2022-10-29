@@ -13,7 +13,7 @@ Over the Air \(OTA\) provides the remote device update capability. Your devices 
 ## Directory Structure<a name="section1464106163817"></a>
 
 ```
-/base/update/ota_lite
+/base/update/sys_install_lite
 .
 ├── frameworks         # OTA update implementation, including update package parsing, verification, writing, and updating
 │   ├── source         # updater module source code
@@ -55,11 +55,11 @@ Add the dependency on the update subsystem. The following uses the Hi3516D V300 
           "description": "",
           "optional": "false",
           "dirs": [
-            "base/update/ota_lite/frameworks",
-            "base/update/ota_lite/interfaces/kits"
+            "base/update/sys_install_lite/frameworks",
+            "base/update/sys_install_lite/interfaces/kits"
           ],
           "targets": [
-            "//base/update/ota_lite/frameworks:ota_lite"
+            "//base/update/sys_install_lite/frameworks:sys_install_lite"
           ],
     ...
     ```
