@@ -15,19 +15,19 @@ import("//build/lite/config/component/lite_component.gni")
 import("//build/lite/config/test.gni")
 import("//build/lite/ndk/ndk.gni")
 
-lite_component("ota_lite") {
-  features = [ "//base/update/ota_lite/frameworks/source:hota" ]
+lite_component("sys_installer_lite") {
+  features = [ "//base/update/sys_installer_lite/frameworks/source:hota" ]
 }
 
 ndk_lib("update_api") {
   deps = []
-  head_files = [ "//base/update/ota_lite/interfaces/kits/" ]
+  head_files = [ "//base/update/sys_installer_lite/interfaces/kits/" ]
 }
 
 subsystem_test("test") {
   test_components = []
   if (ohos_kernel_type != "liteos_m") {
     test_components +=
-        [ "//base/update/ota_lite/frameworks/test/unittest/common:update_test" ]
+        [ "//base/update/sys_installer_lite/frameworks/test/unittest/common:update_test" ]
   }
 }

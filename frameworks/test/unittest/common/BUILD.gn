@@ -17,10 +17,10 @@ unittest("update_test") {
   output_extension = "bin"
   sources = [ "src/ota_test.cpp" ]
   include_dirs = [
-    "//base/update/ota_lite/frameworks/source/verify",
-    "//base/update/ota_lite/interfaces/kits",
-    "//base/update/ota_lite/frameworks/include",
-    "//base/update/ota_lite/hals",
+    "//base/update/sys_installer_lite/frameworks/source/verify",
+    "//base/update/sys_installer_lite/interfaces/kits",
+    "//base/update/sys_installer_lite/frameworks/include",
+    "//base/update/sys_installer_lite/hals",
     "//commonlibrary/utils_liteos/include",
     "//third_party/bounds_checking_function/include",
     "//kernel/liteos-a/compat/linux/include",
@@ -28,7 +28,7 @@ unittest("update_test") {
     "//kernel/liteos-a/lib/libsec/include",
   ]
   deps = [
-    "//base/update/ota_lite/frameworks/source:hota",
+    "//base/update/sys_installer_lite/frameworks/source:hota",
     "//third_party/bounds_checking_function:libsec_shared",
     "//third_party/mbedtls:mbedtls_static",
   ]
