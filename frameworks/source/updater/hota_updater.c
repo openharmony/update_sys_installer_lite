@@ -224,7 +224,7 @@ static int CheckPkgVersionValid(const char *pkgVersion)
     return OHOS_SUCCESS;
 }
 
-static int ParseHotaInfoComponent(unsigned char *infoCompBuffer, unsigned int bufLen)
+static int ParseHotaInfoComponent(unsigned char *infoCompBuffer, unsigned short bufLen)
 {
     if (infoCompBuffer == NULL || g_signDataLen == 0) {
         return OHOS_FAILURE;
