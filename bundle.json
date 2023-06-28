@@ -1,5 +1,5 @@
 {
-    "name": "@ohos/update_sys_installer_lite",
+    "name": "@ohos/sys_installer_lite",
     "version": "3.1",
     "description": "为轻量级设备提供升级写入相关的api",
     "homePage": "https://gitee.com/openharmony",
@@ -51,11 +51,11 @@
         "deps": {
             "components": [
                 "init",
-                "utils_native"
+                "utils_lite"
             ],
             "third_party": [
-                "third_party_bounds_checking_function",
-                "third_party_mbedtls"
+                "bounds_checking_function",
+                "mbedtls"
             ]
         },
         "build": {
