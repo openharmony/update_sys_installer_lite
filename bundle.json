@@ -1,10 +1,11 @@
 {
     "name": "@ohos/sys_installer_lite",
-    "version": "3.1",
+    "version": "4.0.2",
     "description": "为轻量级设备提供升级写入相关的api",
     "homePage": "https://gitee.com/openharmony",
     "license": "Apache License 2.0",
     "repository": "https://gitee.com/openharmony/update_sys_installer_lite",
+    "supplier": "Organization: OpenHarmony",
     "domain": "os",
     "language": "",
     "publishAs": "code-segment",
@@ -51,7 +52,8 @@
         "deps": {
             "components": [
                 "init",
-                "utils_lite"
+                "utils_lite",
+                "liteos_m"
             ],
             "third_party": [
                 "bounds_checking_function",
