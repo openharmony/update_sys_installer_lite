@@ -52,8 +52,7 @@
         "deps": {
             "components": [
                 "init",
-                "utils_lite",
-                "liteos_m"
+                "utils_lite"
             ],
             "third_party": [
                 "bounds_checking_function",
