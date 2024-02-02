@@ -39,9 +39,6 @@
     "component": {
         "name": "sys_installer_lite",
         "subsystem": "updater",
-        "syscap": [
-            "SystemCapability.Updater.Raw"
-        ],
         "features": [],
         "adapted_system_type": [ 
             "mini",
