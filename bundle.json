@@ -39,7 +39,9 @@
     "component": {
         "name": "sys_installer_lite",
         "subsystem": "updater",
-        "features": [],
+        "features": [
+            "sys_installer_lite_security_huks_mbedtls_porting_path"
+        ],
         "adapted_system_type": [ 
             "mini",
             "small"
