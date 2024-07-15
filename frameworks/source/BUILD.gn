@@ -31,7 +31,7 @@ if (ohos_kernel_type == "liteos_m") {
       "//third_party/mbedtls/include",
       "$ohos_third_party_dir/lwip_sack/include",
     ]
-    if (board_toolchain_type != "iccarm) {
+    if (board_toolchain_type != "iccarm") {
         cflags = [ "-Wno-unused-variable" ]
     }
     deps = [ "//base/startup/init/interfaces/innerkits:libbegetutil" ]
