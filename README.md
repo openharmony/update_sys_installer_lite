@@ -77,9 +77,9 @@ Add the dependency on the update subsystem. The following uses the Hi3516D V300 
 
 ## Repositories Involved<a name="section68521336131912"></a>
 
-[Update subsystem](https://gitee.com/openharmony/docs/blob/master/en/readme/update.md)
+[Update subsystem](https://gitcode.com/openharmony/docs/blob/master/en/readme/update.md)
 
 **update\_ota\_lite**
 
-[device\_hisilicon\_hardware](https://gitee.com/openharmony/device_hisilicon_hardware/blob/master/README.md)
+[device\_hisilicon\_hardware](https://gitcode.com/openharmony/device_hisilicon_hardware/blob/master/README.md)
 
