@@ -12,7 +12,7 @@
 
 OTA（Over the Air）提供对设备远程升级能力，基于提供的接口进行二次开发后，可以让您的设备轻松支持OTA升级能力。升级子系统对用户屏蔽了底层芯片的差异，对外提供了统一的升级接口。
 
-更多升级子系统相关概念，请参考：[升级子系统](https://gitee.com/openharmony/docs/blob/master/zh-cn/readme/%E5%8D%87%E7%BA%A7%E5%AD%90%E7%B3%BB%E7%BB%9F.md)
+更多升级子系统相关概念，请参考：[升级子系统](https://gitcode.com/openharmony/docs/blob/master/zh-cn/readme/%E5%8D%87%E7%BA%A7%E5%AD%90%E7%B3%BB%E7%BB%9F.md)
 
 **图 1**  升级子系统架构图
 
@@ -87,9 +87,9 @@ OTA（Over the Air）提供对设备远程升级能力，基于提供的接口�
 
 ## 相关仓<a name="section68521336131912"></a>
 
-[升级子系统](https://gitee.com/openharmony/docs/blob/master/zh-cn/readme/%E5%8D%87%E7%BA%A7%E5%AD%90%E7%B3%BB%E7%BB%9F.md)
+[升级子系统](https://gitcode.com/openharmony/docs/blob/master/zh-cn/readme/%E5%8D%87%E7%BA%A7%E5%AD%90%E7%B3%BB%E7%BB%9F.md)
 
-[**update\_sys\_installer\_lite**](https://gitee.com/openharmony/update_sys_installer_lite)
+[**update\_sys\_installer\_lite**](https://gitcode.com/openharmony/update_sys_installer_lite)
 
-[device\_hisilicon\_hardware](https://gitee.com/openharmony/device_hisilicon_hardware)
+[device\_hisilicon\_hardware](https://gitcode.com/openharmony/device_hisilicon_hardware)
 
